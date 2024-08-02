@@ -87,7 +87,7 @@ public class Rocket implements GameControlScene {
 		if (y > AsteroidsGame.HEIGHT)
 			y = 0;
 		collisionBox.setLocation(x - size / 2, y - size / 2);
-
+		collisionBox = new Rectangle(x - size / 2, y - size / 2, size, size);
 	}
 
 	@Override

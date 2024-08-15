@@ -11,8 +11,10 @@ public class Planet {
      */
     int x, y, width, height;
     int diameter;
-    
-    public Planet(int diameterPixels) {
+    Color planetColor;
+    int distanceFromSun;
+    int orbitPeriod;
+    public Planet(int diameterPixels, Color planetColor, int distanceFromSun, double orbitPeriod) {
         this.diameter = diameterPixels;
     }
 

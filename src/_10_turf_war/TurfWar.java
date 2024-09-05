@@ -23,7 +23,7 @@ public class TurfWar extends PApplet {
 
 
 
-		public Player(int x, int y, int speed, int playerSize, int playerColor, int upKey, int leftKey, int downKey, int rightKey) {
+		public Player(int x, int y, int speed, int playerSize, int playerColor, int upKey, int downKey, int leftKey, int rightKey) {
 			this.x = x;
 			this.y = y;
 			this.speed = speed;
@@ -31,6 +31,7 @@ public class TurfWar extends PApplet {
 			this.playerColor = playerColor;
 			this.upKey = upKey;
 			this.downKey = downKey;
+			this.leftKey = leftKey;
 			this.rightKey = rightKey;
 		}
 		/*
@@ -146,7 +147,7 @@ public class TurfWar extends PApplet {
 	 * Optional: You can change this if you want a shorter or longer game. Right
 	 * now the game will run for 30 seconds (30000 milliseconds).
 	 */
-	int endOfGame = 30000;
+	int endOfGame = 300000;
 
 	@Override
 	public void settings() {
@@ -182,7 +183,7 @@ public class TurfWar extends PApplet {
 		 */
 
 		player1 = new Player(10, 200, 5, 30, Color.blue.getRGB(), UP, DOWN, LEFT, RIGHT);
-		player2 = new Player(290, 200, 5, 30, Color.red.getRGB(), W, A, S, D);
+		player2 = new Player(290, 200, 5, 30, Color.red.getRGB(), W, S, A, D);
 
 	}
 
@@ -273,6 +274,7 @@ if (gameOver == true) {
 		 * 15. Call the enableMovement method for both players and pass keyCode
 		 * to the method.
 		 */        
+		System.out.println(keyCode);
 player1.enableMovement(keyCode);
 player2.enableMovement(keyCode);
 	}
